@@ -12,4 +12,4 @@
     - shell: apt-get -y install virtualbox-guest-additions-iso
     - shell: apt-get -y install linux-image-extra-$(uname -r)
     - shell: apt-get -y install python python-apt
-    - shell: apt-get install linux-image-extra-virtual 
+    - shell: apt-get -y install linux-image-extra-virtual 
