@@ -27,10 +27,10 @@ Vagrant.configure("2") do |config|
     ansible.limit = "all"
 	ansible.sudo  = true
 	ansible.verbose = "v"
-    ansible.playbook = "ansible/playbook.yml"
+    ansible.playbook = "ansible/simple-update.yml"
   end
   # Provisions docker
   config.vm.provision "docker" do |d|
-	d.run "hello-world"
+    d.build_image "/vagrant", args: "-t 'web'"
   end
 end

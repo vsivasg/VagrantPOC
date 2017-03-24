@@ -1,0 +1,15 @@
+#!/usr/bin/env ansible-playbook -i inventory
+
+---
+
+- name: simple provisioner
+  hosts: all
+  sudo: yes
+  gather_facts: false
+  connection: local
+  tasks:
+    - shell: apt-get -y upgrade; apt-get update
+    - shell: apt-get -y install virtualbox-guest-additions-iso
+    - shell: apt-get -y install linux-image-extra-$(uname -r)
+    - shell: apt-get -y install python python-apt
+    - shell: apt-get install linux-image-extra-virtual 
