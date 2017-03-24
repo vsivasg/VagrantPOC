@@ -36,4 +36,17 @@ These commands will bring up the Vagrant box, SSH into it, and then remove it re
 
 Access the Nginx index page by using below URL
 
-http://192.168.77.201:8080/
+http://<IP Address of VM>:8080/
+
+## Testing of your infra using testinfra
+
+# To test ansibe/python installation on Host OS
+Execute below steps
+1) vagrant ssh
+2) testinfra -v /vagrant/test/test_myinfra.py
+
+# To test ansibe installation and nginx installation/service on Docker
+Execute below steps
+1) vagrant ssh
+2) docker exec -it -u root nginix /bin/bash
+3) testinfra -v testinfra -v /test_nginx.py
