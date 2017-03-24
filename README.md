@@ -29,3 +29,4 @@ These commands will bring up the Vagrant box, SSH into it, and then remove it re
 1. Single box with some custom configuration.
 2. Single box with VirtualBox provider.
 3. Single box with VirtualBox provider and Ansible provisioning.
+4. Single box with VirtualBox provider and Docker provisioning.

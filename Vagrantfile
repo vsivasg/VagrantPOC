@@ -23,9 +23,14 @@ Vagrant.configure("2") do |config|
   end
   # Configures Ansible as provisioner
   config.vm.provision :ansible_local do |ansible|
-      # Disable default limit to connect to all the machines
-      ansible.limit = "all"
-	  ansible.verbose = "v"
-      ansible.playbook = "ansible/playbook.yml"
+    # Disable default limit to connect to all the machines
+    ansible.limit = "all"
+	ansible.sudo  = true
+	ansible.verbose = "v"
+    ansible.playbook = "ansible/playbook.yml"
+  end
+  # Provisions docker
+  config.vm.provision "docker" do |d|
+	d.run "hello-world"
   end
 end
