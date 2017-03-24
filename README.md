@@ -31,3 +31,9 @@ These commands will bring up the Vagrant box, SSH into it, and then remove it re
 3. Single box with VirtualBox provider and Ansible provisioning.
 4. Single box with VirtualBox provider and Docker provisioning.
 5. Single box with VirtualBox provider and Docker provisioning and Docker Image build for Nginx.
+
+## How to Access Index Page from Host OS?
+
+Access the Nginx index page by using below URL
+
+http://192.168.77.201:8080/

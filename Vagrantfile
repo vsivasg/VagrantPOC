@@ -32,6 +32,6 @@ Vagrant.configure("2") do |config|
   # Provisions docker
   config.vm.provision "docker" do |d|
     d.build_image "/vagrant", args: "-t 'web'"
-	d.run "web", args: "-p 8080:80 --name 'nginix'"
+	d.run "web", args: "-p 8080:80 --name 'nginix' -v '/vagrant/site:/var/www/site' "
   end
 end
