@@ -36,7 +36,7 @@ These commands will bring up the Vagrant box, SSH into it, and then remove it re
 
 Access the Nginx index page by using below URL
 
-http://<IP Address of VM>:8080/
+http://192.168.77.201:8080/
 
 ## Testing of your infra using testinfra
 
